@@ -1,0 +1,57 @@
+footer {
+  margin: 0px;
+  background-color: #333;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+footer li {
+  display: inline-block;
+  margin: .4em;
+}
+
+.social li::after {
+  content: "/";
+  padding-left: 15px;
+}
+
+.social ul {
+    list-style: none;
+}
+
+.social li:last-child {
+  color: #333;
+}
+
+.social li a {
+    color: #dfe6e9;
+}
+
+.social li a:visited, .social li a:link {
+  text-decoration: none;
+  border: 0;
+  color: #b2bec3;
+  transition: color 0.2s;
+}
+
+.social li a:hover, .social li a:active {
+  text-decoration: none;
+  border: 0;
+  color: #00b894;
+}
+
+.donation p {
+  color: #dfe6e9;
+  font-size: 15px;
+  font-family: 'Indie Flower', serif;
+  margin: 0;
+}
+
+mat-divider {
+  margin-top: 10px;
+  color: #00b894;
+}
+

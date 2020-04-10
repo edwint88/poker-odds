@@ -3,11 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
+
+//material
+import {MatDividerModule} from '@angular/material/divider';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent ],
+  imports:      [ 
+    BrowserModule, 
+    FormsModule, 
+    //material
+    MatDividerModule 
+    ],
+  declarations: [ AppComponent, FooterComponent, HeaderComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

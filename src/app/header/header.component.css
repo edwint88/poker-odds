@@ -1,0 +1,17 @@
+#headerSite{
+  margin: 0px;
+  background-color: #333;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+
+#subtitle {
+  font-family: 'Indie Flower', serif;
+  font-size: 0.8em;
+  position: relative;
+  float: right;
+  margin-right: 3em;
+}
