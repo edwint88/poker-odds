@@ -1,0 +1,6 @@
+node_modules
+
+# ide
+.vs_code
+.idea
+.iml

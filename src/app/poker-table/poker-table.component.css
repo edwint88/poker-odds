@@ -1,9 +1,147 @@
 #pokerTable {
-  background: url("../../assets/img/poker-table.svg") no-repeat;
+  display: block;
+  background: url("/assets/img/poker-table-v2.png") center no-repeat;
   background-size: contain;
-  background-position: middle center;
-  min-height: 600px;
-  height: 100%;
+  min-height: 200px;
+  height: 60%;
   width: 100%;
   margin: 0;
+  margin-top: 15%;
 }
+
+#casinoIcon {
+  color: #00b894;
+}
+
+#learnPokerOdds {
+  background-color: #2d3436;
+}
+
+#ownCardsLeft {
+  position: absolute;
+  margin-left: 45%;
+  margin-top: 20%;
+  border: solid 2px red;
+}
+
+#ownCardsRight {
+  position: absolute;
+  margin-left: 49%;
+  margin-top: 20%;
+  border: solid 2px red;
+}
+
+#flopCard1 {
+  position: absolute;
+  margin-left: 37%;
+  margin-top: 10%;
+}
+
+#flopCard2 {
+  position: absolute;
+  margin-left: 41%;
+  margin-top: 10%;
+}
+
+#flopCard3 {
+  position: absolute;
+  margin-left: 45%;
+  margin-top: 10%;
+}
+
+#turnCard {
+  position: absolute;
+  margin-left: 50%;
+  margin-top: 10%;
+}
+
+#riverCard {
+  position: absolute;
+  margin-left: 55%;
+  margin-top: 10%;
+}
+
+#player1CardsLeft {
+  position: absolute;
+  margin-left: 30%;
+  margin-top: 17%;
+}
+
+#player1CardsRight {
+  position: absolute;
+  margin-left: 34%;
+  margin-top: 17%;
+}
+
+#player2CardsLeft {
+  position: absolute;
+  margin-left: 21%;
+  margin-top: 10%;
+}
+
+#player2CardsRight {
+  position: absolute;
+  margin-left: 25%;
+  margin-top: 10%;
+}
+
+#player3CardsLeft {
+  position: absolute;
+  margin-left: 30%;
+  margin-top: 3%;
+}
+
+#player3CardsRight {
+  position: absolute;
+  margin-left: 34%;
+  margin-top: 3%;
+}
+
+#player4CardsLeft {
+  position: absolute;
+  margin-left: 45%;
+  margin-top: 0;
+}
+
+#player4CardsRight {
+  position: absolute;
+  margin-left: 49%;
+  margin-top: 0;
+}
+
+#player5CardsLeft {
+  position: absolute;
+  margin-left: 60%;
+  margin-top: 3%;
+}
+
+#player5CardsRight {
+  position: absolute;
+  margin-left: 64%;
+  margin-top: 3%;
+}
+
+#player6CardsLeft {
+  position: absolute;
+  margin-left: 69%;
+  margin-top: 10%;
+}
+
+#player6CardsRight {
+  position: absolute;
+  margin-left: 73%;
+  margin-top: 10%;
+}
+
+#player7CardsLeft {
+  position: absolute;
+  margin-left: 60%;
+  margin-top: 17%;
+}
+
+#player7CardsRight {
+  position: absolute;
+  margin-left: 64%;
+  margin-top: 17%;
+}
+
