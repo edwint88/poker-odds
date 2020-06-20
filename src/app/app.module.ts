@@ -16,18 +16,20 @@ import { MatButtonModule } from '@angular/material/button';
 import { PokerTableComponent } from './poker-table/poker-table.component';
 import { PokerStatsComponent } from './poker-stats/poker-stats.component';
 import { PokerCardComponent } from './poker-card/poker-card.component';
+import {DragDropModule} from "@angular/cdk/drag-drop";
 
 
 @NgModule({
-  imports:      [ 
-    BrowserModule, 
-    BrowserAnimationsModule,
-    FormsModule, 
-    //material
-    MatDividerModule,
-    MatIconModule,
-    MatTooltipModule,
-    MatButtonModule
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        //material
+        MatDividerModule,
+        MatIconModule,
+        MatTooltipModule,
+        MatButtonModule,
+        DragDropModule
     ],
   declarations: [ AppComponent, FooterComponent, HeaderComponent, PokerTableComponent, PokerStatsComponent, PokerCardComponent ],
   bootstrap:    [ AppComponent ]
