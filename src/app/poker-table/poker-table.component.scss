@@ -1,11 +1,13 @@
+@import "src/app/card";
+
 #pokerTable {
   display: block;
   background: url("/assets/img/poker-table-v2.png") center no-repeat;
   background-size: contain;
-  min-height: 200px;
-  height: 60%;
+  min-height: 450px;
   width: 100%;
   margin: 0;
+  margin-bottom: 120px;
   margin-top: 15%;
 }
 

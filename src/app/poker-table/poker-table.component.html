@@ -3,7 +3,14 @@
     matTooltip="Learn about poker odds" matTooltipClass="learnPokerOddsTooltip" matTooltipPosition="right">
         <mat-icon id="casinoIcon">casino</mat-icon>
     </button>
-    <div id="ownCardsLeft"><app-poker-card></app-poker-card></div>
+    <div id="ownCardsLeft"><app-poker-card>
+        <strong>
+        <span class="card rank-a clubs">
+            <span class="rank">A</span>
+            <span class="suit">&clubs;</span>
+        </span>
+        </strong>
+    </app-poker-card></div>
     <div id="ownCardsRight"><app-poker-card></app-poker-card></div>
     <div id="flopCard1"><app-poker-card></app-poker-card></div>
     <div id="flopCard2"><app-poker-card></app-poker-card></div>
