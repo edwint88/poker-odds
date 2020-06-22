@@ -1,36 +1,58 @@
-<div id="pokerTable">
+<div class="pokerTable">
     <button id="learnPokerOdds"
             mat-icon-button aria-label="Button to learn more about poker odds"
             #tooltip="matTooltip"
             matTooltip="Learn about poker odds">
         <mat-icon id="casinoIcon">casino</mat-icon>
     </button>
-    <div id="ownCardsLeft"><app-poker-card>
-        <strong>
-        <span class="card rank-a clubs">
-            <span class="rank">A</span>
-            <span class="suit">&clubs;</span>
-        </span>
-        </strong>
-    </app-poker-card></div>
-    <div id="ownCardsRight"><app-poker-card></app-poker-card></div>
-    <div id="flopCard1"><app-poker-card></app-poker-card></div>
-    <div id="flopCard2"><app-poker-card></app-poker-card></div>
-    <div id="flopCard3"><app-poker-card></app-poker-card></div>
-    <div id="turnCard"><app-poker-card></app-poker-card></div>
-    <div id="riverCard"><app-poker-card></app-poker-card></div>
-    <div id="player1CardsLeft"><app-poker-card></app-poker-card></div>
-    <div id="player1CardsRight"><app-poker-card></app-poker-card></div>
-    <div id="player2CardsLeft"><app-poker-card></app-poker-card></div>
-    <div id="player2CardsRight"><app-poker-card></app-poker-card></div>
-    <div id="player3CardsLeft"><app-poker-card></app-poker-card></div>
-    <div id="player3CardsRight"><app-poker-card></app-poker-card></div>
-    <div id="player4CardsLeft"><app-poker-card></app-poker-card></div>
-    <div id="player4CardsRight"><app-poker-card></app-poker-card></div>
-    <div id="player5CardsLeft"><app-poker-card></app-poker-card></div>
-    <div id="player5CardsRight"><app-poker-card></app-poker-card></div>
-    <div id="player6CardsLeft"><app-poker-card></app-poker-card></div>
-    <div id="player6CardsRight"><app-poker-card></app-poker-card></div>
-    <div id="player7CardsLeft"><app-poker-card></app-poker-card></div>
-    <div id="player7CardsRight"><app-poker-card></app-poker-card></div>
+    <div cdkDropList
+         #tableCardsList="cdkDropList"
+         [cdkDropListData]="tableCards"
+         [cdkDropListConnectedTo]="cardsList"
+         class="pokerTable__container"
+         id="ownCardsLeft"
+         (cdkDropListDropped)="drop($event)">
+            <app-poker-card class="pokerTable__back-card">
+            </app-poker-card>
+    </div>
+    <div id="ownCardsRight" class="pokerTable__container"><app-poker-card class="pokerTable__back-card"></app-poker-card></div>
+    <div id="flopCard1" class="pokerTable__container"><app-poker-card class="pokerTable__back-card"></app-poker-card></div>
+    <div id="flopCard2" class="pokerTable__container"><app-poker-card class="pokerTable__back-card"></app-poker-card></div>
+    <div id="flopCard3" class="pokerTable__container"><app-poker-card class="pokerTable__back-card"></app-poker-card></div>
+    <div id="turnCard" class="pokerTable__container"><app-poker-card class="pokerTable__back-card"></app-poker-card></div>
+    <div id="riverCard" class="pokerTable__container"><app-poker-card class="pokerTable__back-card"></app-poker-card></div>
+    <div id="player1CardsLeft" class="pokerTable__container"><app-poker-card class="pokerTable__back-card"></app-poker-card></div>
+    <div id="player1CardsRight" class="pokerTable__container"><app-poker-card class="pokerTable__back-card"></app-poker-card></div>
+    <div id="player2CardsLeft" class="pokerTable__container"><app-poker-card class="pokerTable__back-card"></app-poker-card></div>
+    <div id="player2CardsRight" class="pokerTable__container"><app-poker-card class="pokerTable__back-card"></app-poker-card></div>
+    <div id="player3CardsLeft" class="pokerTable__container"><app-poker-card class="pokerTable__back-card"></app-poker-card></div>
+    <div id="player3CardsRight" class="pokerTable__container"><app-poker-card class="pokerTable__back-card"></app-poker-card></div>
+    <div id="player4CardsLeft" class="pokerTable__container"><app-poker-card class="pokerTable__back-card"></app-poker-card></div>
+    <div id="player4CardsRight" class="pokerTable__container"><app-poker-card class="pokerTable__back-card"></app-poker-card></div>
+    <div id="player5CardsLeft" class="pokerTable__container"><app-poker-card class="pokerTable__back-card"></app-poker-card></div>
+    <div id="player5CardsRight" class="pokerTable__container"><app-poker-card class="pokerTable__back-card"></app-poker-card></div>
+    <div id="player6CardsLeft" class="pokerTable__container"><app-poker-card class="pokerTable__back-card"></app-poker-card></div>
+    <div id="player6CardsRight" class="pokerTable__container"><app-poker-card class="pokerTable__back-card"></app-poker-card></div>
+    <div id="player7CardsLeft" class="pokerTable__container"><app-poker-card class="pokerTable__back-card"></app-poker-card></div>
+    <div id="player7CardsRight" class="pokerTable__container"><app-poker-card class="pokerTable__back-card"></app-poker-card></div>
+
+    <div class="example-container">
+        <h2>Pick cards from here!</h2>
+        <div
+                cdkDropList
+                #cardsList="cdkDropList"
+                [cdkDropListData]="cards"
+                [cdkDropListConnectedTo]="tableCardsList"
+                class="pokerTable__container"
+                (cdkDropListDropped)="drop($event)">
+                <app-poker-card *ngFor="let card of cards" isCdkDrag="true">
+                    <strong>
+                        <span class="card {{card.rank}} {{card.color}}">
+                            <span class="rank">{{card.value}}</span>
+                            <span class="suit">{{card.symbol}}</span>
+                        </span>
+                    </strong>
+                </app-poker-card>
+        </div>
+    </div>
 </div>

@@ -1,6 +1,6 @@
 @import "src/app/card";
 
-#pokerTable {
+.pokerTable {
   display: block;
   background: url("/assets/img/poker-table-v2.png") center no-repeat;
   background-size: contain;
@@ -9,6 +9,19 @@
   margin: 0;
   margin-bottom: 120px;
   margin-top: 15%;
+
+  &__container{
+    @extend .playingCards ;
+  }
+
+  &__back-card {
+    @extend .card ;
+    @extend .back ;
+  }
+}
+
+.playingCards .card {
+  margin: 0;
 }
 
 #casinoIcon {
@@ -21,33 +34,35 @@
 
 #ownCardsLeft {
   position: absolute;
-  margin-left: 45%;
-  margin-top: 20%;
+  margin-left: 43.5%;
+  margin-top: 21%;
   border: solid 2px red;
+  border-radius: 3px;
 }
 
 #ownCardsRight {
   position: absolute;
   margin-left: 49%;
-  margin-top: 20%;
+  margin-top: 21%;
   border: solid 2px red;
+  border-radius: 3px;
 }
 
 #flopCard1 {
   position: absolute;
-  margin-left: 37%;
+  margin-left: 32%;
   margin-top: 10%;
 }
 
 #flopCard2 {
   position: absolute;
-  margin-left: 41%;
+  margin-left: 37.5%;
   margin-top: 10%;
 }
 
 #flopCard3 {
   position: absolute;
-  margin-left: 45%;
+  margin-left: 43%;
   margin-top: 10%;
 }
 
@@ -59,91 +74,91 @@
 
 #riverCard {
   position: absolute;
-  margin-left: 55%;
+  margin-left: 57%;
   margin-top: 10%;
 }
 
 #player1CardsLeft {
   position: absolute;
-  margin-left: 30%;
-  margin-top: 17%;
+  margin-left: 28.5%;
+  margin-top: 18%;
 }
 
 #player1CardsRight {
   position: absolute;
   margin-left: 34%;
-  margin-top: 17%;
+  margin-top: 18%;
 }
 
 #player2CardsLeft {
   position: absolute;
-  margin-left: 21%;
+  margin-left: 17.5%;
   margin-top: 10%;
 }
 
 #player2CardsRight {
   position: absolute;
-  margin-left: 25%;
+  margin-left: 23%;
   margin-top: 10%;
 }
 
 #player3CardsLeft {
   position: absolute;
-  margin-left: 30%;
-  margin-top: 3%;
+  margin-left: 28.5%;
+  margin-top: 2%;
 }
 
 #player3CardsRight {
   position: absolute;
   margin-left: 34%;
-  margin-top: 3%;
+  margin-top: 2%;
 }
 
 #player4CardsLeft {
   position: absolute;
-  margin-left: 45%;
-  margin-top: 0;
+  margin-left: 43.5%;
+  margin-top: -2%;
 }
 
 #player4CardsRight {
   position: absolute;
   margin-left: 49%;
-  margin-top: 0;
+  margin-top: -2%;
 }
 
 #player5CardsLeft {
   position: absolute;
-  margin-left: 60%;
-  margin-top: 3%;
+  margin-left: 58.5%;
+  margin-top: 2%;
 }
 
 #player5CardsRight {
   position: absolute;
   margin-left: 64%;
-  margin-top: 3%;
+  margin-top: 2%;
 }
 
 #player6CardsLeft {
   position: absolute;
-  margin-left: 67%;
+  margin-left: 68%;
   margin-top: 10%;
 }
 
 #player6CardsRight {
   position: absolute;
-  margin-left: 71%;
+  margin-left: 73.5%;
   margin-top: 10%;
 }
 
 #player7CardsLeft {
   position: absolute;
-  margin-left: 60%;
-  margin-top: 17%;
+  margin-left: 58.5%;
+  margin-top: 18%;
 }
 
 #player7CardsRight {
   position: absolute;
   margin-left: 64%;
-  margin-top: 17%;
+  margin-top: 18%;
 }
 
