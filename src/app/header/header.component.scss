@@ -1,12 +1,11 @@
 #headerSite{
-  margin: 0px;
+  margin: 0;
   background-color: #333;
-  position: fixed;
+  position: inherit;
+  height: 100px;
   left: 0;
   top: 0;
-  width: 100%;
   text-align: center;
-  z-index: 9999;
 }
 
 #subtitle {
@@ -15,4 +14,5 @@
   position: relative;
   float: right;
   margin-right: 3em;
+  margin-bottom: 0;
 }

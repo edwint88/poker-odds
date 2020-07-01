@@ -1,11 +1,9 @@
 footer {
-  margin: 0px;
+  margin: 0;
   background-color: #333;
   text-align: center;
   position: fixed;
-  left: 0;
   bottom: 0;
-  width: 100%;
   z-index: 9999;
 }
 
@@ -20,7 +18,8 @@ footer li {
 }
 
 .social ul {
-    list-style: none;
+  list-style: none;
+  margin-bottom: 0;
 }
 
 .social li:last-child {
@@ -28,7 +27,7 @@ footer li {
 }
 
 .social li a {
-    color: #dfe6e9;
+  color: #dfe6e9;
 }
 
 .social li a:visited, .social li a:link {

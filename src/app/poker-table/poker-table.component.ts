@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from "@angular/cdk/drag-drop";
 import {CardInfo} from "../base/card-info";
+import {BehaviorSubject} from "rxjs";
 
 @Component({
     selector: 'app-poker-table',
@@ -36,20 +37,14 @@ export class PokerTableComponent implements OnInit {
         }
     ];
 
-    tableCards: CardInfo[] = [
-        // index 0 = left card
-        // index 1 = right card
-        // index 2 = flop 1 card
-        // index 3 = flop 2 card
-        // index 4 = flop 3 card
-        // index 5 = turn card
-        // index 6 = river card
-    ];
+    flopClass = new BehaviorSubject<string>(null);
+    lastClass = new BehaviorSubject<string>(null);
 
     constructor() {
     }
 
     ngOnInit() {
+        this.checkCssClasses();
     }
 
     drop(event: CdkDragDrop<CardInfo[]>) {
@@ -61,5 +56,20 @@ export class PokerTableComponent implements OnInit {
                 event.previousIndex,
                 event.currentIndex);
         }
+    }
+
+    checkCssClasses() {
+        if (this.isMobile()) {
+            this.flopClass.next('');
+            this.lastClass.next('');
+        } else {
+            this.flopClass.next('col-7');
+            this.lastClass.next('col-5');
+        }
+    }
+
+    public isMobile(): boolean {
+        const width = Math.max(document.documentElement.clientWidth, window.innerWidth, document.body.clientWidth || 0);
+        return width < 768;
     }
 }

@@ -12,12 +12,17 @@ h2, h3 {
   font-weight: lighter;
 }
 body {
-  margin: 2em;
-  background-color: #dfe6e9;
+  background-color: #003300;
 }
+
+@media screen and (min-width: 768px) {
+  body {
+    background-color: #dfe6e9;
+  }
+}
+
 body, input[text], button {
   color: #636e72;
-  font-family: Cambria, Georgia;
 }
 /* everywhere else */
 * {

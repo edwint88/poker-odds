@@ -1,22 +1,62 @@
 @import "src/app/card";
 
 .pokerTable {
-  display: block;
-  background: url("/assets/img/poker-table-v2.png") center no-repeat;
-  background-size: contain;
+  display: flex;
+  flex-flow: column;
   min-height: 450px;
-  width: 100%;
-  margin: 0;
-  margin-bottom: 120px;
-  margin-top: 15%;
+  line-height: inherit;
+  background-color: #003300;
 
-  &__container{
+  &__container {
     @extend .playingCards ;
   }
 
   &__back-card {
     @extend .card ;
     @extend .back ;
+  }
+
+  &__cards-flop {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    div {
+      margin-right: 10px;
+    }
+
+    div:nth-last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__cards-last {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5px;
+    div {
+      margin-right: 10px;
+    }
+
+    div:nth-last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__hand-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    div {
+      margin-right: 10px;
+    }
+
+    div:nth-last-child {
+      margin-right: 0;
+    }
   }
 }
 
@@ -30,135 +70,32 @@
 
 #learnPokerOdds {
   background-color: #2d3436;
+  margin-top: 20px;
 }
 
-#ownCardsLeft {
-  position: absolute;
-  margin-left: 43.5%;
-  margin-top: 21%;
-  border: solid 2px red;
-  border-radius: 3px;
-}
+@media screen and (min-width: 768px) {
+  .pokerTable {
+    display: block;
+    background: url("/assets/img/poker-table-v2.png") center no-repeat;
+    background-size: contain;
+    min-height: 450px;
+    margin: 0;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    padding-top: 150px;
 
-#ownCardsRight {
-  position: absolute;
-  margin-left: 49%;
-  margin-top: 21%;
-  border: solid 2px red;
-  border-radius: 3px;
-}
+    &__cards-flop {
+      display: inline-flex;
+      justify-content: flex-end;
+    }
 
-#flopCard1 {
-  position: absolute;
-  margin-left: 32%;
-  margin-top: 10%;
-}
+    &__cards-last {
+      display: inline-flex;
+      justify-content: flex-start;
+    }
 
-#flopCard2 {
-  position: absolute;
-  margin-left: 37.5%;
-  margin-top: 10%;
+    &__hand-cards {
+      margin-top: 70px;
+    }
+  }
 }
-
-#flopCard3 {
-  position: absolute;
-  margin-left: 43%;
-  margin-top: 10%;
-}
-
-#turnCard {
-  position: absolute;
-  margin-left: 50%;
-  margin-top: 10%;
-}
-
-#riverCard {
-  position: absolute;
-  margin-left: 57%;
-  margin-top: 10%;
-}
-
-#player1CardsLeft {
-  position: absolute;
-  margin-left: 28.5%;
-  margin-top: 18%;
-}
-
-#player1CardsRight {
-  position: absolute;
-  margin-left: 34%;
-  margin-top: 18%;
-}
-
-#player2CardsLeft {
-  position: absolute;
-  margin-left: 17.5%;
-  margin-top: 10%;
-}
-
-#player2CardsRight {
-  position: absolute;
-  margin-left: 23%;
-  margin-top: 10%;
-}
-
-#player3CardsLeft {
-  position: absolute;
-  margin-left: 28.5%;
-  margin-top: 2%;
-}
-
-#player3CardsRight {
-  position: absolute;
-  margin-left: 34%;
-  margin-top: 2%;
-}
-
-#player4CardsLeft {
-  position: absolute;
-  margin-left: 43.5%;
-  margin-top: -2%;
-}
-
-#player4CardsRight {
-  position: absolute;
-  margin-left: 49%;
-  margin-top: -2%;
-}
-
-#player5CardsLeft {
-  position: absolute;
-  margin-left: 58.5%;
-  margin-top: 2%;
-}
-
-#player5CardsRight {
-  position: absolute;
-  margin-left: 64%;
-  margin-top: 2%;
-}
-
-#player6CardsLeft {
-  position: absolute;
-  margin-left: 68%;
-  margin-top: 10%;
-}
-
-#player6CardsRight {
-  position: absolute;
-  margin-left: 73.5%;
-  margin-top: 10%;
-}
-
-#player7CardsLeft {
-  position: absolute;
-  margin-left: 58.5%;
-  margin-top: 18%;
-}
-
-#player7CardsRight {
-  position: absolute;
-  margin-left: 64%;
-  margin-top: 18%;
-}
-

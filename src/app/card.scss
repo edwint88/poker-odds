@@ -46,7 +46,8 @@
 }
 
 .playingCards .card.back {
-  text-indent: -4000px;
+  color: rgba(0,0,0,0);
+  text-shadow: 0 24px 3px #FF0000;
   background-color: #ccc;
   background-repeat: repeat;
   background-image: url(data:image/gif;base64,R0lGODlhJAAkAJEAAOjFsezdztOKbL5QKCH5BAAAAAAALAAAAAAkACQAAAL/HC4RAqm/mmLHyHmAbczB11Ea8ombJKSgKo6Z17pXFznmS1JptiX0z3vVhpEKDoUIkoa0olGIUeZUk1RI6Yn2mh/FDAt6frOrRRTqXPpsVLYugzxaVy+YcBdnoWPZOT0E4eckQtZFZBjWoHixQFWl6Nhol6R2p1Okt5TGaEWZA6fjiMdhZgPHeWrTWGVq+jTZg1HYyAEWKLYzmyiGKoUimilz+YYryyTlg5RcDJSAbNx0Q7lMcbIGEyzTK8zVdfVaImzs/QV+prYqWWW2ObkoOApM/Em/rUlIm7fijs8a2EEKEaZ3AsMUgneEU6RcpJbZ27aGHkAO2Ors8xQH1IR0Bn5YnOtVAAA7); /* image is "Pattern 069" from http://www.squidfingers.com/patterns/ */
@@ -391,22 +392,26 @@
 .playingCards.simpleCards .card.diams .suit:after,
 .playingCards .card.rank-a.diams .suit:after {
   content: "\2666";
-  right: .4em;
+  right: .25em;
+  top: 1.2em;
 }
 .playingCards.simpleCards .card.hearts .suit:after,
 .playingCards .card.rank-a.hearts .suit:after {
   content: "\2665";
-  right: .35em;
+  top: 1.2em;
+  right: 0.15em;
 }
 .playingCards.simpleCards .card.spades .suit:after,
 .playingCards .card.rank-a.spades .suit:after {
   content: "\2660";
-  right: .35em;
+  right: .25em;
+  top: 1.2em;
 }
 .playingCards.simpleCards .card.clubs .suit:after,
 .playingCards .card.rank-a.clubs .suit:after {
   content: "\2663";
-  right: .3em;
+  top: 1.2em;
+  right: 0.15em;
 }
 
 /*____________ smaller cards for use inside text ____________*/
