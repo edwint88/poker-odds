@@ -22,7 +22,7 @@ import {DemoMaterialModule} from "./material-module";
         FormsModule,
         //material
         DemoMaterialModule,
-        DragDropModule
+        DragDropModule,
     ],
   declarations: [ AppComponent, FooterComponent, HeaderComponent, PokerTableComponent, PokerStatsComponent, PokerCardComponent ],
   bootstrap:    [ AppComponent ]

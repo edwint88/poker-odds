@@ -1,10 +1,12 @@
-<div class="pokerTable container-fluid">
-    <!--    <button id="learnPokerOdds"-->
-    <!--            mat-icon-button-->
-    <!--            matTooltip="Learn about poker odds">-->
-    <!--        <mat-icon id="casinoIcon">casino</mat-icon>-->
-    <!--    </button>-->
+<a id="learnPokerOdds"
+        [href]="'https://www.cardschat.com/odds-for-dummies.php'"
+        mat-fab
+        aria-label="Learn about poker odds"
+        matTooltip="Learn about poker odds">
+    <mat-icon id="casinoIcon">casino</mat-icon>
+</a>
 
+<div class="pokerTable container-fluid">
     <div class="pokerTable__cards-flop {{flopClass.getValue()}}">
         <div class="pokerTable__container">
             <app-poker-card class="pokerTable__back-card">

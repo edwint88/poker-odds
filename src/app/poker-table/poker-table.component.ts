@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {CdkDragDrop, moveItemInArray, transferArrayItem} from "@angular/cdk/drag-drop";
 import {CardInfo} from "../base/card-info";
 import {BehaviorSubject} from "rxjs";
 
@@ -45,17 +44,6 @@ export class PokerTableComponent implements OnInit {
 
     ngOnInit() {
         this.checkCssClasses();
-    }
-
-    drop(event: CdkDragDrop<CardInfo[]>) {
-        if (event.previousContainer === event.container) {
-            moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
-        } else {
-            transferArrayItem(event.previousContainer.data,
-                event.container.data,
-                event.previousIndex,
-                event.currentIndex);
-        }
     }
 
     checkCssClasses() {

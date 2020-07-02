@@ -13,6 +13,6 @@ export class PokerCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }ß
+  }
 
 }
